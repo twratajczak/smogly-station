@@ -98,7 +98,7 @@ String createPayload(float h, float t, long pm25, long pm10)
   root["pm10"] = pm10;
   root["temperature"] = t;
   root["humidity"] = h;
-  root["hw_id"] = "0";
+  root["hw_id"] = WiFi.macAddress();
   root["token"] = token;
   String output;
   root.printTo(output);
